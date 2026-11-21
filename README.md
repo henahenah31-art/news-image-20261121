@@ -87,15 +87,17 @@ instead.
 
 ## How it works
 
-Python 3 with Pillow only — no network, no clock, no randomness.
-The program draws the page with its own layout code: a masthead,
+Pure Python 3 standard library only (math, os, struct, sys, zlib) — no
+network, no clock, no randomness, no third-party imaging, no font files.
+The program draws the page with its own layout code, its own 5x7 bitmap
+font, and its own PNG encoder (zlib + struct): a masthead,
 a lead story with a drawn globe and thermometer, seven more main
 stories with hand-drawn icons (cyclone, caravan, saw, flags, waves,
 exam paper, lightning bolt), a two-column briefs section, a
 "BY THE NUMBERS" strip and a footer stating the coverage window.
 Running it twice produces a byte-identical PNG (verified:
-sha256 `b176010734bb019c65987c97e3b85bc99cbdbf9f0c70fa796c49f4b994ce858b`,
-191,284 bytes).
+sha256 `f07266ae9842ed80be7813887c64754939ce1d07d8a0243e52a2097c66606092`,
+37,894 bytes).
 
 ## License
 
